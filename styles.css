@@ -262,7 +262,7 @@ body {
 #crediti {
   position: fixed;
   bottom: 20px; /* Sposta il bottone verso l'alto per aggiungere spazio dal margine inferiore */
-  left: 3%;
+  left: 70px;
   transform: translateX(-50%);
   font-family: 'Montserrat', sans-serif;
   font-size: 24px; /* Tre volte più grande */
@@ -320,4 +320,5 @@ label {
 
 #tipo-pensante{
   position: fixed;
+  left: 100px;
 }

@@ -1,16 +1,3 @@
-/* Lista di cose da fare:
-- Mettere i crediti più a sinistra e creare la schermata dei crediti, cambiare stile del bottone
-- Mettere qualcosa nella pagina iniziale (è vuota)
-- Ingrandire un pelino la E (logo) anche nelle altre schermate, meno che in quella finale. Aggiungere animazioni al passaggio con il mouse
-- Aggiungere Sigmund Freud, Renzo Piano, Galileo Galilei, Marie Curie
-- Animazioni avvio (schermata iniziale)??
-- Animazioni di transizione??
-- Sistemare schermata iniziale, Stile e Titolo??
-- Aggiungere spiegazione Steam Who quando si clicca sul titolo. Nella schermata aggiungere bottone Istruzioni per aprirle??
-- Aggiungere musica di sottofondo??
-- Aggiungere bottone Settings per togliere musica, cambiare colore dello sfondo, cambiare logo E??
-*/
-
 var gameScreen = document.createElement("div");
 gameScreen.id = "game-screen";
 gameScreen.innerHTML = "<h2 style='text-align:center; font-size: 2em;'>Scegli il tuo personaggio</h2><p style='text-align:center; font-size: 1em; margin-top: 0.3em;'>Pensa ad uno di questi personaggi...</p>";
@@ -1214,6 +1201,7 @@ function domandaPoeta2() {
 function Personaggio(x) {
     // Rimuove il contenuto precedente
     gameScreen.innerHTML = "";
+    document.getElementById("tipo-pensante").style.display = "none";
     document.getElementById("crediti").style.display = ABBA;
 
     var credi = document.getElementById("return-button");
@@ -1271,7 +1259,7 @@ function Personaggio(x) {
     });
     gameScreen.appendChild(image);
 }
-
+i = 0;
 document.addEventListener("DOMContentLoaded", function() {
     // Selezione dell'elemento del bottone
     var button = document.getElementById("crediti");
@@ -1281,15 +1269,23 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("title-background").style.display = "none";
         document.getElementById("button").style.display = "none";
         gameScreen.innerHTML = "";
-
-    var Credi = document.createElement("h2");
-    Credi.id = "Domanda";
-    Credi.textContent = " STEAM Who? \
-    Fatto da: \
-    Matteo Tiraferri, \
-    Leonardo Boga, \
-    Diego Amati, \
-    Federico Catani.";
+    i = i + 1;
+    if (i != 1) {
+        document.getElementById("Domanda").style.display = "none";
+        // Qua bisogna fare in modo che cancelli quello vecchio ma non so come si chiami, perciò per ora lascio così, ho provato con la stringa precedente
+        var Credi = document.createElement("h2");
+    }
+    else{
+        var Credi = document.createElement("h2");
+    }
+    console.log(i);
+        Credi.id = "Domanda";
+        Credi.textContent = "STEAM Who? \
+        Fatto da: \
+        Matteo Tiraferri, \
+        Leonardo Boga, \
+        Diego Amati, \
+        Federico Catani.";
 
     Credi.style.textAlign = "center";
     document.body.appendChild(Credi);
@@ -1301,28 +1297,12 @@ function PierGiorgio(){
     modalImage.src = "Immagini\\tipopensante1.png";
     modalImage.alt = "tipopensante";
     modalImage.id = "tipo-pensante";
-    modalImage.style.width = "900px";
-    modalImage.style.height = "900px";
-    modalImage.style.maxWidth = "110%"; // Imposta la larghezza massima al 90% della larghezza della viewport
-    modalImage.style.maxHeight = "110%"; // Imposta l'altezza massima al 90% dell'altezza della viewport
+    modalImage.style.width = "600px";
+    modalImage.style.height = "600px";
+    modalImage.style.maxWidth = "100%"; // Imposta la larghezza massima al 90% della larghezza della viewport
+    modalImage.style.maxHeight = "100%"; // Imposta l'altezza massima al 90% dell'altezza della viewport
     document.body.appendChild(modalImage);
 }
-
-/*
-var buttonReturn = document.createElement("button");
-    buttonReturn.id = "botton-return";
-    buttonReturn.textContent = "C";
-    buttonReturn.onclick = function() {
-        console.log("Ciao")
-    };
-
-var buttonsContainer = document.createElement("div");
-    buttonsContainer.style.textAlign = "center";
-    buttonsContainer.appendChild(buttonReturn);
-
-    gameScreen.appendChild(buttonsContainer);
-
-*/
 
   // Questo assicura che lo script verrà eseguito dopo che l'elemento del bottone è stato creato nel DOM.
 document.addEventListener("DOMContentLoaded", function() {
