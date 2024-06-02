@@ -1,0 +1,60 @@
+/* Stile per il titolo "STEAM Who?" */
+#title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 108px; /* Tre volte più grande */
+  text-align: center;
+  margin-top: 50px; /* Spazio aggiuntivo */
+}
+
+/* Stili per ogni lettera del titolo */
+#title span {
+  font-size: 108px; /* Tre volte più grande */
+}
+
+#title span:nth-child(1) {
+  color: #20618d; /* Colore tendente allo scuro per la lettera "S" */
+}
+
+#title span:nth-child(2) {
+  color: #19703d; /* Colore tendente allo scuro per la lettera "T" */
+}
+
+#title span:nth-child(3) {
+  color: #856b05; /* Colore tendente allo scuro per la lettera "E" */
+}
+
+#title span:nth-child(4) {
+  color: #e74c3c; /* Colore tendente allo scuro per la lettera "A" */
+}
+
+#title span:nth-child(5) {
+  color: #9b59b6; /* Colore tendente allo scuro per la lettera "M" */
+}
+
+/* Stile per il rettangolo dietro il titolo */
+#title-background {
+  background-color: #3d0000; /* Grigio medio */
+  padding: 50px; /* Aumento dello spazio interno */
+  margin-top: 20px; /* Aumento della distanza dal titolo */
+}
+
+/* Stile per il pulsante "Inizia il gioco" */
+#button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px; /* Tre volte più grande */
+  padding: 30px 60px; /* Spaziatura interna aumentata */
+  margin-top: 60px; /* Spazio aggiuntivo */
+  background-color: #ffffff; /* Bianco */
+  color: #000000; /* Nero */
+  border: 2px solid #000000; /* Bordo nero */
+  border-radius: 20px; /* Bordi stondati */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Stile per lo sfondo generale */
+body {
+  background-color: #7f0000; /* Rosso scuro */
+}
