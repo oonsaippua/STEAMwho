@@ -136,7 +136,7 @@ body {
   transform: scale(1.1); /* Ingrandisce il bottone al passaggio del mouse */
 }
 
-/* Stile per il bottone "button-si" */
+/* Stile per il bottone SI */
 #botton-si {
   background-color: #28a745; /* Colore di sfondo verde */
   color: white; /* Colore del testo bianco */
@@ -156,7 +156,7 @@ body {
   transform: scale(1.1); /* Ingrandisce il bottone al passaggio del mouse */
 }
 
-/* Stile per il bottone "button-no" */
+/* Stile per il bottone NO */
 #botton-no {
   background-color: #dc3545; /* Colore di sfondo rosso */
   color: white; /* Colore del testo bianco */
@@ -179,7 +179,7 @@ body {
 
 
 
-/* Stile per la frase "Domanda" */
+/* Stile per le domande */
 #Domanda {
   font-family: 'Montserrat', sans-serif; /* Cambia il tipo di carattere */
   font-size: 48px; /* Cambia la dimensione del carattere */
@@ -318,6 +318,7 @@ label {
   margin-right: 10px;
 }
 
+/* Stile per immagine Tipo pensante */
 #tipo-pensante{
   position: fixed;
   left: 100px;

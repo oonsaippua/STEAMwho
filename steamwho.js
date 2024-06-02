@@ -2,6 +2,7 @@ var gameScreen = document.createElement("div");
 gameScreen.id = "game-screen";
 gameScreen.innerHTML = "<h2 style='text-align:center; font-size: 2em;'>Scegli il tuo personaggio</h2><p style='text-align:center; font-size: 1em; margin-top: 0.3em;'>Pensa ad uno di questi personaggi...</p>";
 
+// Lista per le didascalie
 lista = ["Albert Einstein", "Leonardo da Vinci", "Enrico Fermi", "Werner Karl Heisenberg", "Gregor Mendel", 
     "Pablo Picasso", "Michelangelo Buonarroti", "Steve Jobs", "J. Robert Oppenheimer", "Katherine Johnson", 
     "William Shakespeare", "Nikola Tesla", "Cartesio", "Dante Alighieri", "Frida Kahlo",
@@ -9,6 +10,7 @@ lista = ["Albert Einstein", "Leonardo da Vinci", "Enrico Fermi", "Werner Karl He
     "Isaac Newton", "Alan Turing", "Leonardo Fibonacci", "Stephen Hawking", "Enzo Ferrari", "Sigmund Freud", 
     "Renzo Piano", "Mark Zuckerberg", "Galileo Galilei", "Marie Curie"]
 
+// Lista per i link di Wikipedia
 wikipedia = [
     "https://it.wikipedia.org/wiki/Albert_Einstein",
     "https://it.wikipedia.org/wiki/Leonardo_da_Vinci",
@@ -56,8 +58,6 @@ function startGame() {
     gridContainer.style.gridTemplateColumns = "repeat(5, 1fr)"; // 5 colonne
     gridContainer.style.gridGap = "10px"; // Spazio tra le celle
 
-	
-    // Codice per creare le immagini e le didascalie
     for (let i = 1; i <= 30; i++) {
         var imageContainer = document.createElement("div"); // Contenitore per immagine e didascalia
         imageContainer.style.textAlign = "center"; // Centra il contenuto
@@ -92,10 +92,10 @@ function startGame() {
     buttonA.style.position = "relative"; // Imposta la posizione relativa per il posizionamento relativo ai contenuti della pagina
     buttonA.style.display = "block"; // Rende il bottone un blocco per occupare l'intera larghezza
     buttonA.style.margin = "auto"; // Centra orizzontalmente
-    buttonA.style.fontSize = "3em"; // Grandezza aumentata di 3 volte
-    buttonA.style.padding = "10px 20px"; // Padding aggiunto per migliorare l'aspetto
+    buttonA.style.fontSize = "3em"; // Grandezza x 3 volte
+    buttonA.style.padding = "10px 20px"; 
     buttonA.style.marginTop = "20px"; // Aggiunge spazio sopra il bottone
-    document.body.appendChild(buttonA); // Aggiunge il bottone come figlio del corpo della pagina
+    document.body.appendChild(buttonA); 
 
 
 buttonA.onclick = function inizio() {
@@ -723,7 +723,7 @@ function domandaOscar() {
     buttonSi.textContent = "SI";
     buttonSi.onclick = function() {
         x = "Federico Fellini";
-        Personaggio(x);;
+        Personaggio(x);
     };
 
     var buttonNo = document.createElement("button");
@@ -1234,31 +1234,29 @@ function Personaggio(x) {
     modalImage.style.maxHeight = "90%"; // Imposta l'altezza massima al 90% dell'altezza della viewport
     modalContainer.appendChild(modalImage);
 
-    // Aggiungi un gestore di eventi "click" all'overlay per chiudere la visualizzazione modale
     overlay.addEventListener("click", function() {
         modalContainer.classList.remove("active"); // Rimuove la classe "active" dal contenitore dell'immagine per nasconderlo
         overlay.classList.remove("active"); // Rimuove la classe "active" dall'overlay per nasconderlo
     });
 
-    // Aggiungi un gestore di eventi "click" all'immagine principale per ingrandire l'immagine e mostrare l'overlay con animazione
     var image = document.createElement("img");
     image.src = "Immagini\\" + x + ".jpg";
     image.alt = x;
     image.id = "finalimage";
     image.style.width = "500px";
     image.style.height = "500px";
-    image.style.display = "block"; // Imposta l'immagine come blocco per utilizzare il margin: auto per centrare orizzontalmente
-    image.style.marginLeft = "auto"; // Imposta il margine sinistro su auto per centrare l'immagine
-    image.style.marginRight = "auto"; // Imposta il margine destro su auto per centrare l'immagine
+    image.style.display = "block"; 
+    image.style.marginLeft = "auto"; 
+    image.style.marginRight = "auto"; 
     image.addEventListener("click", function() {
-        // Introduce un piccolo ritardo prima di applicare la classe "active" per far sì che l'animazione sia visibile
         setTimeout(function() {
-            modalContainer.classList.add("active"); // Aggiunge la classe "active" al contenitore dell'immagine per visualizzarlo con animazione
-            overlay.classList.add("active"); // Aggiunge la classe "active" all'overlay per visualizzarlo con animazione
-        }, 10); // 10 millisecondi di ritardo
+            modalContainer.classList.add("active"); 
+            overlay.classList.add("active"); 
+        }, 10);
     });
     gameScreen.appendChild(image);
 }
+
 i = 0;
 document.addEventListener("DOMContentLoaded", function() {
     // Selezione dell'elemento del bottone
