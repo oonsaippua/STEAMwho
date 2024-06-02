@@ -1,14 +1,16 @@
-/* Stile per il titolo "STEAM Who?" */
 #title {
   font-family: 'Montserrat', sans-serif;
   font-size: 108px; /* Tre volte più grande */
   text-align: center;
   margin-top: 50px; /* Spazio aggiuntivo */
+  color: #ffffff; /* Nero */
 }
 
-/* Stili per ogni lettera del titolo */
 #title span {
   font-size: 108px; /* Tre volte più grande */
+  font-family: Georgia, 'Times New Roman', serif; /* Applica il font Georgia */
+  color: inherit; /* Mantieni i colori specificati per ogni lettera */
+  letter-spacing: -20px; /* Riduci lo spazio tra le lettere */
 }
 
 #title span:nth-child(1) {
@@ -31,12 +33,15 @@
   color: #9b59b6; /* Colore tendente allo scuro per la lettera "M" */
 }
 
-/* Stile per il rettangolo dietro il titolo */
+
+
 #title-background {
-  background-color: #3d0000; /* Grigio medio */
-  padding: 50px; /* Aumento dello spazio interno */
+  background-color: #620000; /* Grigio medio */
+  padding: 50px 20px; /* Riduci lo spazio interno orizzontalmente */
   margin-top: 20px; /* Aumento della distanza dal titolo */
+  border-radius: 20px; /* Aggiungi angoli arrotondati */
 }
+
 
 /* Stile per il pulsante "Inizia il gioco" */
 #button {
@@ -48,13 +53,271 @@
   color: #000000; /* Nero */
   border: 2px solid #000000; /* Bordo nero */
   border-radius: 20px; /* Bordi stondati */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra */
+  box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.2);
   display: block;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transizioni per le animazioni */
 }
+
+#button:hover {
+  transform: scale(1.1); /* Ingrandisce il pulsante al passaggio del mouse */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra più pronunciata */
+}
+
+
+
+#button:active {
+  transform: scale(0.9); /* Riduce leggermente il pulsante quando viene premuto */
+  box-shadow: none; /* Rimuove temporaneamente l'ombra quando viene premuto */
+}
+
 
 /* Stile per lo sfondo generale */
 body {
-  background-color: #7f0000; /* Rosso scuro */
+  background-color: #c94d4d; /* Rosso scuro */
+}
+
+#return-button {
+  position: absolute;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Posizione in basso a destra */
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50%; /* Aggiunta di bordi arrotondati per rendere il pulsante rotondo */
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transizioni per le animazioni */
+  background-image: url('Immagini/Logo3.jpg'); /* Percorso dell'immagine */
+  background-size: cover; /* Ridimensiona l'immagine per coprire l'intera area del bottone */
+  background-position: center; /* Posiziona l'immagine al centro */
+  background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+}
+
+#return-button:hover {
+  transform: scale(1.6); /* Ingrandisce il bottone al passaggio del mouse */
+  transform-origin: bottom right;  /*Imposta l'origine della trasformazione in basso a destra */
+}
+
+/* Contenitore per il bottone */
+#button-container {
+  position: relative; /* Assicura che il contenitore abbia una posizione relativa */
+  margin-top: 20px; /* Aggiunge spazio sopra il bottone */
+}
+
+#botton-a {
+  position: fixed;
+  background-color: #4CAF50; /* Colore di sfondo */
+  border: none; /* Rimuove il bordo */
+  color: white; /* Colore del testo */
+  padding: 15px 30px; /* Spaziatura interna */
+  text-align: center; /* Allinea il testo al centro */
+  text-decoration: none; /* Rimuove la sottolineatura */
+  display: inline-block;
+  box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.2);
+  font-size: 16px; /* Dimensione del testo */
+  margin: 10px; /* Margine esterno */
+  cursor: pointer; /* Cambia il cursore al passaggio */
+  border-radius: 5px; /* Bordo arrotondato */
+  transition-duration: 0.4s; /* Animazione della transizione */
+}
+
+#botton-a:hover {
+  background-color: #45a049; /* Cambia colore al passaggio del mouse */
+  color: white; /* Cambia colore del testo al passaggio del mouse */
+  transform: scale(1.1); /* Ingrandisce il bottone al passaggio del mouse */
+}
+
+/* Stile per il bottone "button-si" */
+#botton-si {
+  background-color: #28a745; /* Colore di sfondo verde */
+  color: white; /* Colore del testo bianco */
+  padding: 30px 60px; /* Spaziatura interna ingrandita */
+  font-size: 48px; /* Dimensione del carattere ingrandita */
+  border: 3px solid #135f30; /* Bordo di colore più scuro e spesso */
+  border-radius: 15px; /* Bordo arrotondato */
+  cursor: pointer; /* Cambio di cursore al passaggio del mouse */
+  margin-right: 100px; /* Distanza dalla destra */
+  margin-left: 20px; /* Distanza dalla sinistra */
+  margin-top: 70px; /* Aggiungi un margine superiore */
+  transition: border-color 0.3s; /* Animazione del cambio di colore del bordo */
+}
+
+#botton-si:hover {
+  border-color: #fff; /* Cambio di colore del bordo al passaggio del mouse */
+  transform: scale(1.1); /* Ingrandisce il bottone al passaggio del mouse */
+}
+
+/* Stile per il bottone "button-no" */
+#botton-no {
+  background-color: #dc3545; /* Colore di sfondo rosso */
+  color: white; /* Colore del testo bianco */
+  padding: 30px 60px; /* Spaziatura interna ingrandita */
+  font-size: 48px; /* Dimensione del carattere ingrandita */
+  border: 3px solid #ac2a38; /* Bordo di colore più scuro e spesso */
+  border-radius: 15px; /* Bordo arrotondato */
+  cursor: pointer; /* Cambio di cursore al passaggio del mouse */
+  margin-right: 20px; /* Distanza dalla destra */
+  margin-left: 100px; /* Distanza dalla sinistra */
+  margin-top: 70px; /* Aggiungi un margine superiore */
+  transition: border-color 0.3s; /* Animazione del cambio di colore del bordo */
+}
+
+#botton-no:hover {
+  border-color: #fff; /* Cambio di colore del bordo al passaggio del mouse */
+  transform: scale(1.1); /* Ingrandisce il bottone al passaggio del mouse */
+}
+
+
+
+
+/* Stile per la frase "Domanda" */
+#Domanda {
+  font-family: 'Montserrat', sans-serif; /* Cambia il tipo di carattere */
+  font-size: 48px; /* Cambia la dimensione del carattere */
+  color: #171717; /* Cambia il colore del testo */
+  font-weight: bold; /* Rendi il testo in grassetto */
+  text-align: center; /* Allinea il testo al centro */
+  margin-top: 180px; /* Aggiungi un margine superiore */
+  margin-bottom: 20px; /* Aggiungi un margine inferiore */
+}
+
+#caption {
+  font-family: 'Montserrat', sans-serif; /* Cambia il tipo di carattere */
+  font-size: 24px; /* Cambia la dimensione del carattere */
+  color: #000000; /* Cambia il colore del testo */
+  font-weight: bold; /* Rendi il testo in grassetto */
+  text-align: center; /* Allinea il testo al centro */
+  margin-top: 10px; /* Aggiungi un margine superiore */
+  margin-bottom: 10px; /* Aggiungi un margine inferiore */
+}
+
+#image-griglia {
+  transition: transform 0.3s, border-radius 0.3s; /* Aggiunge una transizione per l'animazione */
+  border-radius: 10px; /* Applica angoli arrotondati */
+  cursor: pointer; /* Cambio di cursore al passaggio del mouse */
+}
+
+#image-griglia:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine al passaggio del mouse */
+  border-radius: 20px; /* Applica angoli arrotondati */
+}
+
+#finalimage {
+  border-radius: 15px; /* Applica angoli arrotondati */
+}
+
+/* Stile per l'overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Inizialmente trasparente */
+  z-index: 9999;
+  transition: background-color 0.5s ease; /* Transizione per l'opacità, ora dura 0.5 secondi */
+}
+
+/* Stile per il contenitore dell'immagine ingrandita */
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Inizialmente più piccolo */
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transizioni per l'opacità e la trasformazione, ora durano 0.5 secondi */
+}
+
+/* Stile per l'immagine nell'overlay */
+#modal-container img {
+  width: 1000px; /* Larghezza fissa */
+  height: 1000px; /* Altezza fissa */
+}
+
+/* Aggiungi classe "active" per mostrare l'overlay e l'immagine ingrandita con animazione */
+#overlay.active {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo scuro */
+}
+
+#modal-container.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Ingrandisce l'immagine al 100% */
+}
+
+
+#crediti {
+  position: fixed;
+  bottom: 20px; /* Sposta il bottone verso l'alto per aggiungere spazio dal margine inferiore */
+  left: 3%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px; /* Tre volte più grande */
+  padding: 10px 20px; /* Spaziatura interna aumentata */
+  background-color: #ffffff; /* Bianco */
+  color: #000000; /* Nero */
+  border: 2px solid #000000; /* Bordo nero */
+  border-radius: 20px; /* Bordi stondati */
+  box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transizioni per le animazioni */
+}
+
+#crediti:hover {
+  background-color: #c2c2c2; /* Cambia colore al passaggio del mouse */
+}
+
+
+#select-color {
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px; /* Aggiungi angoli arrotondati */
+}
+
+#select-color:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Scurisci lo sfondo al passaggio del cursore */
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+body {
+  /* Specifica un colore di sfondo predefinito */
+  --selected-color: white;
+}
+
+#select-color {
+  font-size: 16px;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px; /* Aggiungi angoli arrotondati */
+}
+
+#select-color:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Scurisci lo sfondo al passaggio del cursore */
+}
+
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#tipo-pensante{
+  position: fixed;
 }
